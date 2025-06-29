@@ -1,0 +1,19 @@
+{%- comment -%}
+  BudgetPrice Integration for Shopify Themes
+  Add this to your product template or product form section
+{%- endcomment -%}
+
+{% if product.available and product.price > 0 %}
+  <div class="budgetprice-integration" data-product-id="{{ product.id }}" data-product-price="{{ product.price }}">
+    <script>
+      window.BudgetPriceProduct = {
+        id: {{ product.id | json }},
+        handle: {{ product.handle | json }},
+        price: {{ product.price | json }},
+        title: {{ product.title | json }},
+        vendor: {{ product.vendor | json }}
+      };
+    </script>
+    <script src="https://cdn.budgetprice.app/v1/shopify-install.min.js" async></script>
+  </div>
+{% endif %}

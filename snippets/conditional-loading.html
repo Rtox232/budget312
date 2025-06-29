@@ -1,0 +1,4 @@
+<!-- BudgetPrice: Only on specific products -->
+{% unless product.tags contains 'no-budgetprice' %}
+<script src="https://cdn.budgetprice.app/v1/shopify-install.min.js" async></script>
+{% endunless %}
