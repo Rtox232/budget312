@@ -1,0 +1,17 @@
+{
+  "name": "@budgetprice/scripts",
+  "version": "1.0.0",
+  "description": "Build and deployment scripts for BudgetPrice",
+  "type": "module",
+  "scripts": {
+    "build-widgets": "node build-shopify.js",
+    "build-all": "npm run build --workspaces"
+  },
+  "dependencies": {
+    "@budgetprice/shared": "workspace:*"
+  },
+  "devDependencies": {
+    "esbuild": "^0.24.0",
+    "typescript": "^5.0.0"
+  }
+}
